@@ -2,13 +2,13 @@
 
 This is a bash script to run a R shiny app on a slurm cluster (GenomeDK) and connect to the node where it is running from your local computer and open it on the Chrome browser. 
 
-In more detail, the script `shiny_cluster.sh` will submit to `slurm` a job `job.sh` on the cluster. The job submitted will run an R script `run_app.R` which will run the shiny app `app.R`. Then, `shiny_cluster` will check periodically if the job started running. Once it does, it creates a shh tunel which connects to the node in which the job is running on the cluster. Finally, it opens the shiny app to the Chrome browser of your local machine.
+In more detail, the script `shiny_cluster.sh` will submit to `slurm` a job `job.sh` on the cluster. The job submitted will run an R script `run_app.R` which will run the shiny app `app.R`. Then, `shiny_cluster` will check periodically if the job started running. Once it does, it creates a shh tunnel which connects to the node in which the job is running on the cluster. Finally, it opens the shiny app to the Chrome browser of your local machine.
 
 This script might be interesting to you if you are:
   - running a shiny app which handles a lot of data stored in a cluster and downloading the data is tedious or not feasible
   - you need to run a shiny app that uses a lot of resources (memory) that your local computer doesn't have
   - mounting the cluster on your local computer makes the app run very slow when running it on your local machine Rstudio
-  - sharing the app with other people colaborating with you
+  - sharing the app with other people collaborating with you
 
 In order to run the script you need to have [access to the cluster with a public key authentication](https://genome.au.dk/docs/getting-started/#public-key-authentication), Chrome installed on your local machine and have an environment that has all what is needed to run shiny app on the cluster.
 
@@ -58,7 +58,7 @@ It will let you know that the job got cancelled and ask you if you want to check
 
   - 3.2. Job runs
   
-The script will notify that the job runs and tell you the node in which it has been alocated.
+The script will notify that the job runs and tell you the node in which it has been allocated.
 
   4. Open a shh tunnel to the cluster and open the browser
   
@@ -68,9 +68,9 @@ As the title says, it will open a shh tunnel to the cluster and open the shiny a
 Hope it helps you as much as it has helped me! Let me know on the issues of the repo if you have any problems with the script or if you think `shiny_cluster` can be improved in any way!
 
 
-# For colaborators using GenerationInterval shiny app
+# For collaborators using GenerationInterval shiny app
 
-These are the instructions to be able to run the GenerationInterval shiny app from your localcomputer.
+These are the instructions to be able to run the GenerationInterval shiny app from your local computer.
 
 1. copy the file `job_moicoll.sh` 
 
@@ -82,11 +82,11 @@ cp /faststorage/projects/GenerationInterval/people/moi/scripts/job_moicoll.sh /f
   2.1. the username "moicoll" to your user name in lines 4, 5 and 6
   2.2. change the conda environment name which has all the necessary r packages installed. These are `r`, `r-tidyverse`, `r-shiny`, `r-shinyWidgets`, `r-tidyverse`, `r-leaflet`, `r-viridis`, `r-dt`, `r-ggiraph`. It is possible that the list is not completed, but R should complain about laking a library. 
   
-  2.3. change the port "4444" by another 4 digit number
+  2.3. change the port "4444" by another 4-digit number
   
 3. Download the `shiny_app.sh` file from this repo
 
-4. Modify the variables at the begginging of the `shiny_app.sh`
+4. Modify the variables at the beginnging of the `shiny_app.sh`
   4.1. the `u` variable for you GenomeDK user 
-  4.2. the `c` and `l` variables for two 4 digit ports. `c` must be the same as the one used in step 2.3.
+  4.2. the `c` and `l` variables for two 4-digit ports. `c` must be the same as the one used in step 2.3.
   4.3. the `s` path for the name of the job you used in step 1. 
