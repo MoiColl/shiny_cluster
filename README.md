@@ -89,4 +89,17 @@ cp /faststorage/projects/GenerationInterval/people/moi/scripts/job_moicoll.sh /f
 4. Modify the variables at the beginnging of the `shiny_app.sh`
   4.1. the `u` variable for you GenomeDK user 
   4.2. the `c` and `l` variables for two 4-digit ports. `c` must be the same as the one used in step 2.3.
-  4.3. the `s` path for the name of the job you used in step 1. 
+  4.3. the `s` path for the name of the job you used in step 1.
+  
+5. From the directory where `shiny_app.sh` is located run it with 
+
+```
+$ bash shiny_app.sh
+```
+
+You can provide `shiny_app.sh` with some inputs that can be checked with 
+
+
+```
+$ bash shiny_app.sh -h
+```
