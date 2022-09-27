@@ -79,17 +79,16 @@ cp /faststorage/projects/GenerationInterval/people/moi/scripts/job_moicoll.sh /f
 ```
 
 2. Modify the newly generated `job_<USER>.sh`
-  2.1. the username "moicoll" to your user name in lines 4, 5 and 6
-  2.2. change the conda environment name which has all the necessary r packages installed. These are `r`, `r-tidyverse`, `r-shiny`, `r-shinyWidgets`, `r-tidyverse`, `r-leaflet`, `r-viridis`, `r-dt`, `r-ggiraph`. It is possible that the list is not completed, but R should complain about laking a library. 
-  
-  2.3. change the port "4444" by another 4-digit number
+  - 2.1. the username "moicoll" to your user name in lines 4, 5 and 6
+  - 2.2. change the conda environment name which has all the necessary r packages installed. These are `r`, `r-tidyverse`, `r-shiny`, `r-shinyWidgets`, `r-tidyverse`, `r-leaflet`, `r-viridis`, `r-dt`, `r-ggiraph`. It is possible that the list is not completed, but R should complain about laking a library. 
+  - 2.3. change the port "4444" by another 4-digit number
   
 3. Download the `shiny_app.sh` file from this repo
 
 4. Modify the variables at the beginnging of the `shiny_app.sh`
-  4.1. the `u` variable for you GenomeDK user 
-  4.2. the `c` and `l` variables for two 4-digit ports. `c` must be the same as the one used in step 2.3.
-  4.3. the `s` path for the name of the job you used in step 1.
+  - 4.1. the `u` variable for you GenomeDK user 
+  - 4.2. the `c` and `l` variables for two 4-digit ports. `c` must be the same as the one used in step 2.3.
+  - 4.3. the `s` path for the name of the job you used in step 1.
   
 5. From the directory where `shiny_app.sh` is located run it with 
 
