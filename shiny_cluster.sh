@@ -4,7 +4,7 @@
 u="moicoll"
 c=4444
 l=4444
-s="/home/moicoll/GenerationInterval/people/moi/scripts/job.sh"
+s="/home/moicoll/GenerationInterval/people/moi/scripts/job_moicoll.sh"
 w=10
 k="empty"
 error="empty"
