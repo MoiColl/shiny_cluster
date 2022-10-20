@@ -72,15 +72,24 @@ Hope it helps you as much as it has helped me! Let me know on the issues of the 
 
 These are the instructions to be able to run the GenerationInterval shiny app from your local computer.
 
+### A. ON CLUSTER
+
 1. copy the file `job_moicoll.sh` 
 
 ```
-cp /faststorage/projects/GenerationInterval/people/moi/scripts/job_moicoll.sh /faststorage/projects/GenerationInterval/people/moi/scripts/job_<USER>.sh
+cp /faststorage/project/GenerationInterval/people/moi/scripts/job_moicoll.sh /faststorage/project/GenerationInterval/people/moi/scripts/job_<USER>.sh
 ```
 
 2. Modify the newly generated `job_<USER>.sh`
   - 2.1. the username "moicoll" to your user name in lines 4, 5 and 6
-  - 2.2. change the conda environment name which has all the necessary r packages installed. These are `r`, `r-tidyverse`, `r-shiny`, `r-shinyWidgets`, `r-tidyverse`, `r-leaflet`, `r-viridis`, `r-dt`, `r-ggiraph`. It is possible that the list is not completed, but R should complain about laking a library. 
+  - 2.2. change the conda environment name which has all the necessary r packages installed. These are `r`, `r-tidyverse`, `r-shiny`, `r-shinyWidgets`, `r-tidyverse`, `r-leaflet`, `r-viridis`, `r-dt`, `r-ggiraph`, `r-data.tree`, `r-shinytree`. It is possible that the list is not completed, but R should complain about laking a library.
+  
+  Alternatively, you can copy the environment I'm using with:
+  
+  ```
+  conda env create -f /faststorage/project/GenerationInterval/people/moi/backup/environment_shiny_cluster.yml
+  ```
+  
   - 2.3. change the port "4444" by another 4-digit number
   
 3. Download the `shiny_app.sh` file from this repo
