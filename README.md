@@ -92,22 +92,22 @@ cp /faststorage/project/GenerationInterval/people/moi/scripts/job_moicoll.sh /fa
   
   - 2.3. change the port "4444" by another 4-digit number
   
-3. Download the `shiny_app.sh` file from this repo
+3. Download the `shiny_cluster.sh` file from this repo
 
-4. Modify the variables at the beginnging of the `shiny_app.sh`
+4. Modify the variables at the beginnging of the `shiny_cluster.sh`
   - 4.1. the `u` variable for you GenomeDK user 
   - 4.2. the `c` and `l` variables for two 4-digit ports. `c` must be the same as the one used in step 2.3.
   - 4.3. the `s` path for the name of the job you used in step 1.
   
-5. From the directory where `shiny_app.sh` is located run it with 
+5. From the directory where `shiny_cluster.sh` is located run it with 
 
 ```
-$ bash shiny_app.sh
+$ bash shiny_cluster.sh
 ```
 
-You can provide `shiny_app.sh` with some inputs that can be checked with 
+You can provide `shiny_cluster.sh` with some inputs that can be checked with 
 
 
 ```
-$ bash shiny_app.sh -h
+$ bash shiny_cluster.sh -h
 ```
