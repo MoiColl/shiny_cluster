@@ -77,7 +77,7 @@ These are the instructions to be able to run the GenerationInterval shiny app fr
 1. copy the file `job_moicoll.sh` 
 
 ```
-cp /faststorage/project/GenerationInterval/people/moi/scripts/job_moicoll.sh /faststorage/project/GenerationInterval/people/moi/scripts/job_<USER>.sh
+cp /faststorage/project/GenerationInterval/people/moi/app_run/job_moicoll.sh /faststorage/project/GenerationInterval/people/moi/app_run/job_<USER>.sh
 ```
 
 2. Modify the newly generated `job_<USER>.sh`
